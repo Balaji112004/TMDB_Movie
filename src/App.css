@@ -1,0 +1,15 @@
+.banner>img{
+
+    height:80vh;
+    width: 100%;
+}
+.banner{
+    position: relative;
+}
+.banner>h1{
+    background-color: black;
+    position:absolute;
+    left: 45%;
+    bottom: 0;
+    color: white;
+}
