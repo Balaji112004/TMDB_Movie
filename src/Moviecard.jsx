@@ -1,13 +1,18 @@
 import React from 'react'
 import './App.css'
 
-function Moviecard({url}) {
+function Moviecard({movie,title}) {
   return (
-    <div>
+    <div className='p-4'>
 
-        <div className='h-[40vh] w-[150px] rounded-xl bg-cover bg-center hover:scale-110 duration-300 hover:cursor-pointer' style={{backgroundImage:`url(https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/215788/AQAMN_VERT_TSR_DOM_2764x4096-R01_master.jpg)`}}>
+<div className='group h-[50vh] w-[250px] rounded-xl bg-cover bg-center hover:scale-110 duration-300 cursor-pointer flex items-end' style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${movie.poster_path})`}}>
+{/* <img src={"https://image.tmdb.org/t/p/original/"+movie.poster_path} alt="" /> */}
+  <div className='text-white text-sm opacity-0 group-hover:opacity-100 p-2.5 bg-gray-700 w-full flex justify-center rounded-b-xl transition-opacity duration-300'>
+    {movie.title}
+    
+  </div>
+</div>
 
-        </div>
     </div>
   )
 }
