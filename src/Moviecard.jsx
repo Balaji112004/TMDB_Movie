@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function Moviecard({ movie, title }) {
-  const [heart, setheart] = useState(true);
-  const [hovered, setHovered] = useState(false);
+function Moviecard({ movie, title, watch,toggleWatch }) {
 
-  function tog() {
-    setheart(!heart);
-  }
+  const [hovered, setHovered] = useState(false);
+  // console.log(movie);
+  
+
+
   return (
     // <div className="p-4" >
     //   <div
@@ -50,17 +50,17 @@ function Moviecard({ movie, title }) {
             
           </div>
           <div className="absolute top-2 right-2">
-          {heart ? (
-            <i
-              class="bx bx-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
-              onClick={tog}
-            ></i>
-          ) : (
-            <i
-              class="bx bxs-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
-              onClick={tog}
-            ></i>
-          )}
+              {watch.some((m) => m.id === movie.id) ? (
+                <i
+                  className="bx bxs-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
+                  onClick={() => toggleWatch(movie)}
+                ></i>
+              ) : (
+                <i
+                  className="bx bx-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
+                  onClick={() => toggleWatch(movie)}
+                ></i>
+              )}
         </div>
       </div>
       :
@@ -70,17 +70,17 @@ function Moviecard({ movie, title }) {
               {movie.title}
           </div>
           <div className="absolute top-2 right-2">
-          {heart ? (
-            <i
-              class="bx bx-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
-              onClick={tog}
-            ></i>
-          ) : (
-            <i
-              class="bx bxs-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
-              onClick={tog}
-            ></i>
-          )}
+              {watch.some((m) => m.id === movie.id) ? (
+                <i
+                  className="bx bxs-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
+                  onClick={() => toggleWatch(movie)}
+                ></i>
+              ) : (
+                <i
+                  className="bx bx-heart bg-black text-xl text-red-500 p-2 rounded-2xl"
+                  onClick={() => toggleWatch(movie)}
+                ></i>
+              )}
         </div>
       </div>
     }
