@@ -14,16 +14,25 @@ function Movies({watch,toggleWatch,heart}) {
   function Incre() {
     setcount(count + 1);
   }
-  useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=7ef55c786669cab2ab2072cd9cbb9313&language=en-US&page=${count}`
-      )
-      .then(function (res) {
-        console.log(res.data.results);
-        setmovies(res.data.results);
-      });
-  }, [count]);
+useEffect(() => {
+// axios.get(`/api/movies?page=${count}`)
+//   .then(res => {
+//     console.log("API Response:", res.data);
+//     setmovies(res.data.results || []); // fallback to empty array if undefined
+//   })
+//   .catch(err => console.error("Error fetching movies:", err));
+
+axios
+  .get(`http://localhost:5000/api/movies?page=${count}`)
+  .then(res => {
+    console.log(res.data.results);
+    setmovies(res.data.results || []);
+  })
+  .catch(err => console.error("Error fetching movies:", err));
+
+
+}, [count]);
+
   return (
     <div>
       <div
