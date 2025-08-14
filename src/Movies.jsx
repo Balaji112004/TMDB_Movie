@@ -15,25 +15,17 @@ function Movies({watch,toggleWatch,heart}) {
     setcount(count + 1);
   }
 useEffect(() => {
-// axios.get(`/api/movies?page=${count}`)
-//   .then(res => {
-//     console.log("API Response:", res.data);
-//     setmovies(res.data.results || []); // fallback to empty array if undefined
-//   })
-//   .catch(err => console.error("Error fetching movies:", err));
+  axios
+    .get(`/api/movies?page=${count}`)
+    .then((res) => {
+      console.log("Page:", count, res.data.results);
+      setmovies(res.data.results);
+    })
+    .catch((err) => {
+      console.error("Error fetching movies:", err);
+    });
+}, [count]); // count must be in dependency array
 
-axios
-  // .get(`http://localhost:5000/api/movies?page=${count}`)
-  .get(axios.get(`https://tmdb-movie-84gxe1g56-balaji-ks-projects-f5faff26.vercel.app/api/movies?page=${count}`)
-)
-  .then(res => {
-    console.log(res.data.results);
-    setmovies(res.data.results || []);
-  })
-  .catch(err => console.error("Error fetching movies:", err));
-
-
-}, [count]);
 
   return (
     <div>
