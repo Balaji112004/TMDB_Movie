@@ -1,5 +1,6 @@
 export default async function handler(req, res) {
-  const page = req.query.page || 1; // get page from query, default 1
+  const page = req.query.page || 1;
+  console.log("Requested Page:", page); // ✅ should log 1, 2, 3...
 
   try {
     const response = await fetch(
