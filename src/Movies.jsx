@@ -23,7 +23,9 @@ useEffect(() => {
 //   .catch(err => console.error("Error fetching movies:", err));
 
 axios
-  .get(`http://localhost:5000/api/movies?page=${count}`)
+  // .get(`http://localhost:5000/api/movies?page=${count}`)
+  .get(axios.get(`https://tmdb-movie-84gxe1g56-balaji-ks-projects-f5faff26.vercel.app/api/movies?page=${count}`)
+)
   .then(res => {
     console.log(res.data.results);
     setmovies(res.data.results || []);
