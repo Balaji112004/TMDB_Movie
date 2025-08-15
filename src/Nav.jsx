@@ -1,6 +1,7 @@
 import React from 'react'
 import "./App.css";
 import { Link, Outlet } from 'react-router-dom'
+import logo from '../src/assets/logo.PNG';
 
 function Nav() {
   return (
