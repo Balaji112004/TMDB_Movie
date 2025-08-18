@@ -28,7 +28,7 @@ function Watchlist({ watch, toggleWatch, setwatch }) {
   }, [watch]);
 
   return (
-   <div>
+<div>
       {/* Genre Buttons */}
       <div className="my-5 flex flex-row flex-wrap justify-center">
         {genrelist.map((genre, index) => (
@@ -62,7 +62,7 @@ function Watchlist({ watch, toggleWatch, setwatch }) {
         <table className="w-full text-center text-gray-500">
           <thead className="border-b-2">
             <tr>
-              <th className=" text-xs lg:text-lg lg:w-[30%] p-1">Name</th>
+              <th className=" text-xs w-[20%] lg:text-lg lg:w-[30%] p-1">Name</th>
               <th className="text-xs lg:text-lg">
                 <div className="">
                   <button onClick={sortDecreasing}>
@@ -95,7 +95,7 @@ function Watchlist({ watch, toggleWatch, setwatch }) {
                         src={`https://image.tmdb.org/t/p/original/${lis.poster_path}`}
                         alt=""
                       />
-                      <p className="text-xs lg:text-lg absolute left-2 lg:absolute lg:left-35 top-33 lg:top-15">{lis.title}</p>
+                      <p className="text-xs lg:text-lg absolute left-2 lg:absolute lg:left-35 top-27 lg:top-15">{lis.title}</p>
                     </div>
                   </td>
                   <td className="text-xs lg:text-lg">{lis.vote_average}</td>
