@@ -36,11 +36,12 @@ function Moviecard({ movie, title, watch,toggleWatch }) {
     //   </div>
     // </div>
 
+   
     <div className="p-4 "  onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
       {hovered?
-          <div className="group h-[20vh] w-[250px] rounded-xl hover:scale-160 z-20 duration-300 cursor-pointer relative">
-          <img className="h-[20vh] w-[250px] rounded-t-xl" src={"https://image.tmdb.org/t/p/original/"+movie.backdrop_path} alt="" />
-          <div className="text-white w-full  text-md opacity-0 group-hover:opacity-100 p-2.5 bg-gray-900/60 rounded-b-xl transition-opacity duration-300">
+          <div className="h-[80px] w-[200px] group lg:h-[20vh] lg:w-[250px] rounded-xl hover:scale-160 z-20 duration-300 cursor-pointer relative mb-40">
+          <img className="h-[17vh] w-full lg:h-[20vh] lg:w-[250px] rounded-t-xl" src={"https://image.tmdb.org/t/p/original/"+movie.backdrop_path} alt="" />
+          <div className=" text-white w-full  text-xs lg:opacity-0 lg:group-hover:opacity-100 p-2.5 bg-gray-900/60 rounded-b-xl transition-opacity duration-300">
               
               <h1 className="font-semibold pb-1">  {movie.title}</h1>
               <div className="text-xs font-semibold pb-1">Year : {movie.release_date.slice(0,4)}</div>
@@ -64,8 +65,8 @@ function Moviecard({ movie, title, watch,toggleWatch }) {
         </div>
       </div>
       :
-          <div className="group h-[50vh] w-[250px] rounded-xl hover:scale-110  duration-300 cursor-pointer relative">
-          <img className="h-[50vh] w-[250px] rounded-xl" src={"https://image.tmdb.org/t/p/original/"+movie.poster_path} alt="" />
+          <div className="h-[300px] w-[200px] group lg:h-[50vh] lg:w-[250px] rounded-xl hover:scale-110  duration-300 cursor-pointer relative">
+          <img className="h-[300px] w-[200px] lg:h-[50vh] lg:w-[250px] rounded-xl" src={"https://image.tmdb.org/t/p/original/"+movie.poster_path} alt="" />
           <div className="text-white absolute bottom-0 w-full text-center text-md opacity-0 group-hover:opacity-100 p-2.5 bg-gray-900/60 rounded-b-xl transition-opacity duration-300">
               {movie.title}
           </div>
