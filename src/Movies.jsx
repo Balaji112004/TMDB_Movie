@@ -30,11 +30,11 @@ useEffect(() => {
 
 
   return (
-     <div>
+      <div>
       <div
-        className="h-[150px] lg:h-[30vh] lg:w-full lg:h-[70vh]  bg-cover bg-center flex items-end justify-center"
+        className="h-[180px] lg:h-[30vh] lg:w-full lg:h-[70vh]  bg-cover bg-center flex items-end justify-center"
       >
-        <img src={movieNight} className="h-[150px] lg:h-[70vh]"/>
+        <img src={movieNight} className="h-[180px] lg:h-[70vh]"/>
 
         {/* <div className="text-sm p-1 text-white lg:text-xl lg:p-2.5 bg-gray-900/60 w-full flex justify-center">
         <img src="../src/assets/Movie Night.png" alt="" />
