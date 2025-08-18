@@ -30,19 +30,18 @@ useEffect(() => {
 
 
   return (
-    <div>
+     <div>
       <div
-        className="h-[30vh] lg:w-full lg:h-[70vh]  bg-cover bg-center flex items-end justify-center"
-        style={{
-          backgroundImage: `url(${movieNight})`,
-        }}
+        className="h-[150px] lg:h-[30vh] lg:w-full lg:h-[70vh]  bg-cover bg-center flex items-end justify-center"
       >
+        <img src={movieNight} className="h-[150px] lg:h-[70vh]"/>
 
-{/*         <div className="text-sm p-1 text-white lg:text-xl lg:p-2.5 bg-gray-900/60 w-full flex justify-center">
+        {/* <div className="text-sm p-1 text-white lg:text-xl lg:p-2.5 bg-gray-900/60 w-full flex justify-center">
+        <img src="../src/assets/Movie Night.png" alt="" />
           Avengers-Infinity War
         </div> */}
       </div>
-      <div className="font-bold text-3xl text-center pt-2 m-4 mb-10">
+      <div className="text-lg font-bold lg:text-3xl text-center pt-2 m-4 lg:mb-10">
         Trending Movies
       </div>
 
