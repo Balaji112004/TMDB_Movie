@@ -37,10 +37,10 @@ function Moviecard({ movie, title, watch,toggleWatch }) {
     // </div>
 
    
-    <div className="p-4 "  onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
+   <div className="p-4 "  onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
       {hovered?
-          <div className="h-[80px] w-[200px] group lg:h-[20vh] lg:w-[250px] rounded-xl hover:scale-160 z-20 duration-300 cursor-pointer relative mb-40">
-          <img className="h-[17vh] w-full lg:h-[20vh] lg:w-[250px] rounded-t-xl" src={"https://image.tmdb.org/t/p/original/"+movie.backdrop_path} alt="" />
+          <div className="h-[130px] w-[270px] group lg:h-[20vh] lg:w-[250px] rounded-xl hover:scale-160 z-20 duration-300 cursor-pointer relative mb-40">
+          <img className="h-[23vh] w-full lg:h-[20vh] lg:w-[250px] rounded-t-xl" src={"https://image.tmdb.org/t/p/original/"+movie.backdrop_path} alt="" />
           <div className=" text-white w-full  text-xs lg:opacity-0 lg:group-hover:opacity-100 p-2.5 bg-gray-900/60 rounded-b-xl transition-opacity duration-300">
               
               <h1 className="font-semibold pb-1">  {movie.title}</h1>
