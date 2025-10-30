@@ -65,12 +65,12 @@ function Watchlist({ watch, toggleWatch, setwatch }) {
               <th className=" text-xs w-[20%] lg:text-lg lg:w-[30%] p-1">Name</th>
               <th className="text-xs lg:text-lg">
                 <div className="">
-                  <button onClick={sortDecreasing}>
+                  <button onClick={sortIncreasing}>
                     <i className="bx bx-up-arrow-alt lg:pr-3"></i>
                   </button>
                   Ratings
                   
-                  <button onClick={sortIncreasing}>
+                  <button onClick={sortDecreasing}>
                     <i className="bx bx-down-arrow-alt lg:pl-3"></i>
                   </button>
                 </div>
